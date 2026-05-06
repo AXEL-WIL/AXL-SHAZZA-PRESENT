@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXL & SHAZZA PRESENT</title>
+
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        AANKOMENDE SHOW
+        <img src="assets/poster.png" alt="Event Poster">
+        <a href="#tickets" class="cta-button" onclick="closePopup()">BUY TICKETS NOW</a>
+        <span class="close" onclick="closePopup()">✕</span>
+    </div>
+</div>
+
+
+<header>
+    <h1>AXL & SHAZZA PRESENT</h1>
+    <h1>BILLIE EILISH</h1>
+    <p>13 OKT 2026 • Kavka Oudaan</p>
+    <a class="cta-button" href="https://eventbrite.com" target="_blank">Koop Tickets</a>
+</header>
+
+<!-- SCROLLING ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+    <div class="announcement-track">
+        TICKETS ON SALE • AXL & SHAZZA PRESENT BILLIE EILISH • NEW SHOW • TICKETS ON SALE • AXL & SHAZZA PRESENT BILLIE
+        EILISH •
+    </div>
+</div>
+
+<section>
+    <h2>Over het event</h2>
+    <p>
+        Stap in een duistere sfeer waar diepe beats en mysterieuze visuals samenkomen.
+        Een nacht vol energie, contrast en intense vibes.
+    </p>
+</section>
+
+<section>
+    <h2>Wie zijn wij</h2>
+    <div class="lineup">
+        <div class="card">
+            <img src="assets/AXL.jpg" alt="AXL">
+            AXL
+            <!--            IFRAME FROM SPOTIFY-->
+        </div>
+        <div class="card">
+            <img src="assets/SHAZZA.jpg" alt="SHAZZA">
+            SHAZZA
+            <!--            IFRAME FROM SPOTIFY-->
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Locatie</h2>
+    <p>Kavka Oudaan - ANTWERPEN</p>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.186203969298!2d4.403116600000001!3d51.21564540000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f098f36b77%3A0x44f52b58b62fbe6d!2sKavka%20Oudaan!5e0!3m2!1snl!2sus!4v1778024438034!5m2!1snl!2sus"
+                width="100%" height="300" style="border:0; margin-top: 15px;"></iframe>
+    </div>
+</section>
+
+<section id="tickets">
+    <h2>Tickets</h2>
+    <p>Klik hieronder om tickets te kopen:</p>
+    <a class="cta-button" href="https://eventbrite.com" target="_blank">Koop Tickets</a>
+</section>
+
+<footer>
+    © 2026 AXL & SHAZZA PRESENT — Alle rechten voorbehouden
+    <script>
+        window.onload = () => {
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</footer>
+</body>
+</html>
