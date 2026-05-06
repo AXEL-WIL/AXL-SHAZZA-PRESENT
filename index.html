@@ -6,6 +6,7 @@
     <title>AXL & SHAZZA PRESENT</title>
 
     <link rel="stylesheet" href="./index.css">
+    <script src="./script.js"></script>
 </head>
 
 <body>
@@ -47,15 +48,35 @@
 <section>
     <h2>Wie zijn wij</h2>
     <div class="lineup">
-        <div class="card">
+        <div class="card" onclick="toggleArtist(this)">
             <img src="assets/AXL.jpg" alt="AXL">
-            AXL
-            <!--            IFRAME FROM SPOTIFY-->
+            <h3>AXL</h3>
+
+            <div class="expand">
+                <p>AXL is a dark electronic artist blending heavy bass and atmospheric sound design.</p>
+
+                <iframe src="https://open.spotify.com/embed/artist/4j5gqj7ZoBb9W6IhiIrGa8" width="100%" height="152"></iframe>
+
+                <div class="links">
+                    <a class="cta-button" href="https://instagram.com" target="_blank">Instagram</a>
+                    <a class="cta-button" href="https://open.spotify.com" target="_blank">Spotify</a>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <img src="assets/SHAZZA.jpg" alt="SHAZZA">
-            SHAZZA
-            <!--            IFRAME FROM SPOTIFY-->
+        <div class="card" onclick="toggleArtist(this)">
+            <img src="assets/SHAZZA.jpg" alt="AXL">
+            <h3>SHAZZA</h3>
+
+            <div class="expand">
+                <p>SHAZZA is a dark electronic artist blending heavy bass and atmospheric sound design.</p>
+
+                <iframe src="https://open.spotify.com/embed/artist/4j5gqj7ZoBb9W6IhiIrGa8" width="100%" height="152"></iframe>
+
+                <div class="links">
+                    <a class="cta-button" href="https://instagram.com" target="_blank">Instagram</a>
+                    <a class="cta-button" href="https://open.spotify.com" target="_blank">Spotify</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -77,15 +98,6 @@
 
 <footer>
     © 2026 AXL & SHAZZA PRESENT — Alle rechten voorbehouden
-    <script>
-        window.onload = () => {
-            document.getElementById('popup').style.display = 'flex';
-        }
-
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-    </script>
 </footer>
 </body>
 </html>

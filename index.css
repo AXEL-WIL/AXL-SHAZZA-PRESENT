@@ -113,10 +113,33 @@ h2 {
     position: relative;
     overflow: hidden;
     max-width: 400px;
+    cursor: pointer;
 }
 
 .card:hover {
     transform: translateY(-10px) scale(1.03);
+}
+
+.expand {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(-10px);
+}
+
+.card.active .expand {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 15px;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .card > img {
