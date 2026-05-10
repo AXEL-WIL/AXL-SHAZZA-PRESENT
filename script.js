@@ -9,3 +9,11 @@ function closePopup() {
 function toggleArtist(card) {
     card.classList.toggle("active");
 }
+
+function openArtists() {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        card.classList.add("active");
+    });
+}

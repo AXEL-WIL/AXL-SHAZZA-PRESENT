@@ -13,6 +13,10 @@
     font-family: Arial, sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* FULL SCREEN SIDE LIGHTS */
 
 body {
@@ -772,5 +776,56 @@ footer {
 @media (max-width: 768px) {
     .tickets-card {
         flex-direction: column;
+    }
+}
+
+/*Floating button*/
+.floating-artists-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+
+    padding: 14px 20px;
+    border-radius: 999px;
+
+    background: linear-gradient(90deg, var(--red-glow), var(--blue-glow));
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+
+    box-shadow:
+            0 0 15px rgba(52, 69, 184, 0.4),
+            0 0 25px rgba(139, 0, 0, 0.25);
+
+    backdrop-filter: blur(10px);
+
+    cursor: pointer;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+
+    animation: floatPulse 2.5s ease-in-out infinite;
+}
+
+/* hover */
+.floating-artists-btn:hover {
+    transform: scale(1.12);
+    box-shadow:
+            0 0 25px rgba(52, 69, 184, 0.6),
+            0 0 35px rgba(139, 0, 0, 0.4);
+    filter: brightness(1.2);
+}
+
+/* subtle floating animation */
+@keyframes floatPulse {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-6px) scale(1.02);
+    }
+    100% {
+        transform: translateY(0) scale(1);
     }
 }
