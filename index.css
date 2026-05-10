@@ -245,6 +245,36 @@ p {
     cursor: pointer;
 }
 
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.arrow {
+    font-size: 1.2rem;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.arrow > img {
+    width: 50px;
+    height: 25px;
+}
+
+/* hover hint */
+.card:hover .arrow {
+    opacity: 1;
+    transform: translateY(2px);
+}
+
+/* when active (expanded) */
+.card.active .arrow {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
 .card:hover {
     transform: translateY(-10px) scale(1.03);
 }
