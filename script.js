@@ -17,3 +17,20 @@ function openArtists() {
         card.classList.add("active");
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector(".about-text");
+    const btn = document.getElementById("readMoreBtn");
+
+    if (!section || !btn) return;
+
+    btn.addEventListener("click", () => {
+        section.classList.toggle("expanded");
+
+        if (section.classList.contains("expanded")) {
+            btn.textContent = "Lees minder";
+        } else {
+            btn.textContent = "Lees meer";
+        }
+    });
+});

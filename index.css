@@ -1,6 +1,4 @@
-/* 
-   VARIABLES & RESET
- */
+/* VARIABLES & RESET*/
 :root {
     --primary:   #0b0000;
     --red-glow:  #8b0000;
@@ -28,9 +26,7 @@
 html { scroll-behavior: smooth; }
 
 
-/* 
-   BODY & BACKGROUND
- */
+/* BODY & BACKGROUND*/
 body {
     background: radial-gradient(circle at top, #0f0000 0%, #000000 70%);
     color: var(--text);
@@ -40,9 +36,7 @@ body {
 }
 
 
-/* 
-   SIDE GLOW LIGHTS
- */
+/* SIDE GLOW LIGHTS*/
 .side-glow {
     position: fixed;
     top: -20%;
@@ -89,9 +83,7 @@ body {
 }
 
 
-/* 
-   HEADER
- */
+/* HEADER*/
 header {
     background: linear-gradient(145deg, #0a0000, #120000);
     color: white;
@@ -119,9 +111,7 @@ header p {
 }
 
 
-/* 
-   ANNOUNCEMENT BAR
- */
+/* ANNOUNCEMENT BAR*/
 .announcement-bar {
     width: 100%;
     overflow: hidden;
@@ -144,9 +134,7 @@ header p {
 }
 
 
-/* 
-   SECTIONS
- */
+/* SECTIONS*/
 section {
     padding: 60px 20px;
     max-width: 900px;
@@ -170,10 +158,8 @@ h2 {
 p { opacity: 0.9; }
 
 
-/* 
-   SHARED CARD STYLES
-   (hero-card, venue-card, tickets-card all share this base)
- */
+/* SHARED CARD STYLES
+   (hero-card, venue-card, tickets-card all share this base)*/
 .panel-card {
     display: flex;
     justify-content: space-between;
@@ -198,9 +184,7 @@ p { opacity: 0.9; }
 .tickets-main { flex: 2; }
 
 
-/* 
-   CTA BUTTON
- */
+/* CTA BUTTON*/
 .cta-button {
     display: inline-block;
     margin-top: 25px;
@@ -220,9 +204,7 @@ p { opacity: 0.9; }
 }
 
 
-/* 
-   HERO QUICK-INFO SECTION
- */
+/* HERO QUICK-INFO SECTION*/
 .quick-info { max-width: 900px; margin: auto; }
 
 .hero-left h2  { margin-bottom: 10px; }
@@ -281,9 +263,7 @@ p { opacity: 0.9; }
 }
 
 
-/* 
-   ARTIST LINEUP CARDS
- */
+/* ARTIST LINEUP CARDS*/
 .lineup {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -402,9 +382,7 @@ p { opacity: 0.9; }
 iframe { margin-top: 10px; }
 
 
-/* 
-   VENUE / LOCATION SECTION
- */
+/* VENUE / LOCATION SECTION*/
 .venue-left h3   { font-size: 1.3rem; margin-bottom: 8px; }
 .venue-sub       { opacity: 0.7; margin-bottom: 10px; }
 
@@ -459,9 +437,7 @@ iframe { margin-top: 10px; }
 }
 
 
-/* 
-   INFO CARDS (reusable small tiles)
- */
+/* INFO CARDS (reusable small tiles)*/
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -485,9 +461,7 @@ iframe { margin-top: 10px; }
 .info-card p                  { font-size: 0.9rem; opacity: 0.85; line-height: 1.4; }
 
 
-/* 
-   TICKETS SECTION
- */
+/* TICKETS SECTION*/
 .tickets-main h3 { font-size: 1.3rem; margin-bottom: 10px; }
 .price           { font-size: 1.4rem; margin-bottom: 10px; }
 .note            { opacity: 0.75; margin-bottom: 20px; }
@@ -509,9 +483,7 @@ iframe { margin-top: 10px; }
 .ticket-info p  { font-size: 0.85rem; opacity: 0.75; }
 
 
-/* 
-   POPUP
- */
+/* POPUP*/
 .popup {
     position: fixed;
     inset: 0;
@@ -567,9 +539,7 @@ iframe { margin-top: 10px; }
 }
 
 
-/* 
-   FLOATING BUTTON
- */
+/* FLOATING BUTTON*/
 .floating-artists-btn {
     position: fixed;
     bottom: 25px;
@@ -602,9 +572,7 @@ iframe { margin-top: 10px; }
 }
 
 
-/* 
-   FOOTER
- */
+/* FOOTER*/
 footer {
     text-align: center;
     padding: 30px;
@@ -613,9 +581,7 @@ footer {
 }
 
 
-/* 
-   CUSTOM SCROLLBAR
- */
+/* CUSTOM SCROLLBAR*/
 ::-webkit-scrollbar       { width: 10px; }
 ::-webkit-scrollbar-track { background: #050505; box-shadow: inset 0 0 10px rgba(0,0,0,.8); }
 
@@ -632,34 +598,151 @@ footer {
 }
 
 
-/* 
-   MOBILE OVERRIDES
- */
+/* READ MORE (about section mobile)*/
+
+/* Hidden on desktop */
+.read-more-btn { display: none; }
+
 @media (max-width: 768px) {
 
-    body    { line-height: 1.5; }
-    section { padding: 40px 16px; }
+    .about-text p {
+        max-height: 4.8em; /* ~3 lines at 1.6 line-height */
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
 
-    h2 { font-size: 1.4rem; text-align: center; }
+    .about-text.expanded p {
+        max-height: 20em;
+    }
+
+    .read-more-btn {
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 0.85rem;
+        color: var(--red-glow);
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        opacity: 1;
+        letter-spacing: 0.5px;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+}
+
+
+/* MOBILE OVERRIDES */
+@media (max-width: 768px) {
+
+    /*  Base  */
+    body    { line-height: 1.6; }
+    section { padding: 44px 20px; }
+
+    h2 { font-size: 1.3rem; }
     p  { font-size: 0.95rem; }
 
-    header    { padding: 70px 15px; }
-    header h1 { font-size: 1.8rem; }
-    header p  { font-size: 1rem; }
+    /*  Header: less padding, smaller title, more air  */
+    header {
+        padding: 60px 24px 50px;
+    }
 
-    .hero-location { font-size: 0.9rem; text-align: center; }
+    header h1 {
+        font-size: 1.55rem;
+        line-height: 1.25;
+        margin-bottom: 8px;
+    }
 
-    .lineup           { grid-template-columns: 1fr; }
-    .card             { max-width: 100%; }
-    .card > img       { width: 100%; height: auto; }
+    header p {
+        font-size: 0.95rem;
+        margin-top: 6px;
+    }
+
+    .cta-button {
+        margin-top: 20px;
+        padding: 13px 26px;
+        font-size: 0.95rem;
+    }
+
+    /*  Quick info: strip decorative copy, only show data  */
+    .hero-left .sub        { display: none; }
+    .hero-highlight        { display: none; }
+    .hero-left h2          { font-size: 1.1rem; margin-bottom: 14px; }
+
+    .mini-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .mini-grid div {
+        padding: 10px 12px;
+    }
+
+    .mini-grid h4 { font-size: 0.75rem; opacity: 0.6; margin-bottom: 2px; }
+    .mini-grid p  { font-size: 0.95rem; font-weight: bold; }
+
+    .hero-location { font-size: 0.9rem; }
+
+    /*  Artist cards: full width, smaller image  */
+    .lineup           { grid-template-columns: 1fr; gap: 12px; }
+    .card             { max-width: 100%; padding: 16px; }
+    .card > img       { height: 400px; object-fit: cover; }
     .expand           { font-size: 0.9rem; }
-    iframe            { height: 140px; }
+    iframe            { height: 130px; }
 
-    .venue-links { flex-direction: column; gap: 8px; }
+    /*  Venue: map comes first, info grid compact row  */
+    .venue-card { flex-direction: column-reverse; gap: 20px; padding: 20px; }
 
-    .info-grid { grid-template-columns: 1fr; }
+    .map-container { margin-top: 0; }
+    .map-container iframe { height: 220px; min-height: unset; }
 
-    .tickets-main h3 { font-size: 1.2rem; }
+    .venue-left h3  { font-size: 1.1rem; }
 
-    .floating-artists-btn { bottom: 15px; right: 15px; padding: 12px 16px; font-size: 0.85rem; }
+    .venue-info-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 14px;
+    }
+
+    .venue-info-grid .info-card {
+        padding: 10px 8px;
+        text-align: center;
+    }
+
+    .venue-info-grid .info-card h4 { font-size: 0.7rem; opacity: 0.6; margin-bottom: 4px; }
+    .venue-info-grid .info-card p  { font-size: 0.78rem; line-height: 1.3; }
+
+    /*  Tickets: hide side info, focus on price + CTA  */
+    .tickets-card   { flex-direction: column; padding: 24px 20px; gap: 0; }
+    .tickets-side   { display: none; }
+    .tickets-main h3 { font-size: 1.15rem; }
+    .price          { font-size: 1.3rem; }
+    .note           { font-size: 0.85rem; opacity: 0.65; margin-bottom: 16px; }
+    .cta-button     { width: 100%; text-align: center; display: block; }
+
+    /*  Practical info: horizontal scroll pills  */
+    .info-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 10px;
+        padding-bottom: 6px;
+        /* hide scrollbar visually but keep scroll */
+        scrollbar-width: none;
+    }
+
+    .info-grid::-webkit-scrollbar { display: none; }
+
+    .info-grid .info-card {
+        flex: 0 0 auto;
+        min-width: 140px;
+        text-align: center;
+        padding: 14px 12px;
+    }
+
+    /*  Venue links: row, not column  */
+    .venue-links { flex-direction: row; gap: 12px; flex-wrap: wrap; }
+
+    /*  Floating button: hidden on mobile (nav is inline)  */
+    .floating-artists-btn { display: none; }
 }
