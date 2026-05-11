@@ -808,21 +808,16 @@ footer {
     /*  Practical info: horizontal scroll pills  */
     .info-grid {
         display: flex;
-        flex-direction: row;
-        overflow-x: auto;
+        flex-direction: column;
+        overflow-x: hidden;
         gap: 10px;
-        padding-bottom: 6px;
-        /* hide scrollbar visually but keep scroll */
-        scrollbar-width: none;
+        padding-bottom: 0;
     }
 
-    .info-grid::-webkit-scrollbar { display: none; }
-
     .info-grid .info-card {
-        flex: 0 0 auto;
-        min-width: 140px;
-        text-align: center;
-        padding: 14px 12px;
+        width: 100%;
+        min-width: unset;
+        text-align: left;
     }
 
     /*  Venue links: row, not column  */
