@@ -110,6 +110,85 @@ header p {
     100% { opacity: 1;   }
 }
 
+/* LANGUAGE SWITCHER */
+
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 1000;
+
+    display: flex;
+    gap: 8px;
+
+    padding: 6px;
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+            0 0 15px rgba(52,69,184,0.12),
+            0 0 20px rgba(139,0,0,0.08);
+}
+
+/* buttons */
+.lang-btn {
+    border: none;
+    outline: none;
+
+    padding: 8px 14px;
+    border-radius: 999px;
+
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+            background 0.25s ease,
+            color 0.25s ease,
+            transform 0.25s ease;
+}
+
+/* hover */
+.lang-btn:hover {
+    color: white;
+    background: rgba(255,255,255,0.06);
+}
+
+/* active language */
+.lang-btn.active {
+    background: var(--red-glow);
+
+    color: white;
+
+    box-shadow:
+            0 0 10px rgba(139,0,0,0.35),
+            0 0 10px rgba(52,69,184,0.25);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .language-switcher {
+        top: 16px;
+        right: 16px;
+
+        padding: 5px;
+        gap: 6px;
+    }
+
+    .lang-btn {
+        padding: 7px 12px;
+        font-size: 0.78rem;
+    }
+}
 
 /* ANNOUNCEMENT BAR*/
 .announcement-bar {

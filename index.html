@@ -4,136 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AXL & SHAZZA</title>
+
     <link rel="stylesheet" href="./index.css">
-    <script src="./script.js"></script>
+    <script defer src="./script.js"></script>
 </head>
 
 <body>
 
-<!-- ========================
-     POPUP
-======================== -->
+<!-- POPUP -->
 <div id="popup" class="popup">
     <div class="popup-content">
-        AANKOMENDE SHOW
+
+        <span data-i18n="popupTitle">
+            AANKOMENDE SHOW
+        </span>
+
         <img src="assets/poster.png" alt="Event Poster">
-        <a href="#" class="cta-button" onclick="closePopup()">BUY TICKETS NOW</a>
+
+        <a
+                href="#"
+                class="cta-button"
+                onclick="closePopup()"
+                data-i18n="buyTicketsPopup">
+
+            BUY TICKETS NOW
+
+        </a>
+
         <span class="close" onclick="closePopup()">✕</span>
+
     </div>
 </div>
 
 
-<!-- ========================
-     HEADER
-======================== -->
+<!-- HEADER -->
 <header>
-    <h1>AXL & SHAZZA PRESENT</h1>
-    <h1>THE <u>BILLIE EILISH</u> TRIBUTE</h1>
-    <p>13 OKT 2026 • Kavka Oudaan</p>
-    <a class="cta-button" href="https://eventbrite.com" target="_blank">Koop Tickets</a>
+
+    <h1 data-i18n="headerTitle1">
+        AXL & SHAZZA PRESENT
+    </h1>
+
+    <h1 data-i18n="headerTitle2">
+        THE BILLIE EILISH TRIBUTE
+    </h1>
+
+    <p data-i18n="eventDate">
+        13 OKT 2026 • Kavka Oudaan
+    </p>
+
+    <a
+            data-i18n="buyTickets"
+            class="cta-button"
+            href="https://eventbrite.com"
+            target="_blank">
+
+        Koop Tickets
+
+    </a>
+
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="setLanguage('nl')">NL</button>
+        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+    </div>
+
 </header>
 
 
-<!-- ========================
-     ANNOUNCEMENT BAR
-======================== -->
+<!-- ANNOUNCEMENT BAR -->
 <div class="announcement-bar">
-    <div class="announcement-track">
-        TICKETS ON SALE • AXL & SHAZZA PRESENT BILLIE EILISH • NEW SHOW • TICKETS ON SALE • AXL & SHAZZA PRESENT BILLIE EILISH •
+    <div class="announcement-track" data-i18n="announcementBar">
+
+        TICKETS BESCHIKBAAR •
+        AXL & SHAZZA PRESENT BILLIE EILISH •
+        NIEUWE SHOW •
+        TICKETS BESCHIKBAAR •
+
     </div>
 </div>
 
 
-<!-- ========================
-     ABOUT SECTION
-======================== -->
+<!-- ABOUT SECTION -->
 <section>
-    <h2>Over het event</h2>
+
+    <h2 data-i18n="aboutTitle">
+        Over het event
+    </h2>
+
     <div class="about-text">
-        <p>
-            Een avond geïnspireerd door de wereld van Billie Eilish: intiem, donker en tegelijk warm en kwetsbaar.
-            Verwacht een live band, subtiele maar intense lichtshows en een performance die elke emotie versterken.
-            Samen met een hechte groep fans creëren we een gedeeld moment dat voelt als één grote ademhaling in het donker,
-            een herinnering die blijft hangen, zoals bij haar meest iconische tours.
+
+        <p data-i18n="aboutText">
+
+            Een avond geïnspireerd door de wereld van Billie Eilish:
+            intiem, donker en tegelijk warm en kwetsbaar.
+            Verwacht een live band, subtiele maar intense lichtshows
+            en een performance die elke emotie versterkt.
+            Samen met een hechte groep fans creëren we een gedeeld moment
+            dat voelt als één grote ademhaling in het donker,
+            een herinnering die blijft hangen.
+
         </p>
 
-        <button class="read-more-btn" id="readMoreBtn"> Lees meer </button>
+        <button
+                class="read-more-btn"
+                id="readMoreBtn"
+                data-i18n="readMore">
+
+            Lees meer
+
+        </button>
+
     </div>
+
 </section>
 
 
-<!-- ========================
-     QUICK INFO
-======================== -->
+<!-- QUICK INFO -->
 <section class="quick-info">
+
     <div class="panel-card hero-card">
 
         <div class="panel-left hero-left">
-            <h2>Event in 30 seconds</h2>
-            <p class="sub">Everything you need to know before buying a ticket.</p>
+
+            <h2 data-i18n="quickInfoTitle">
+                Event in 30 seconden
+            </h2>
+
+            <p class="sub" data-i18n="quickInfoSub">
+                Alles wat je moet weten voordat je een ticket koopt.
+            </p>
+
             <div class="hero-highlight">
                 <p><strong>AXL & SHAZZA</strong></p>
-                <p>The Billie Eilish Tribute</p>
+
+                <p data-i18n="tributeText">
+                    The Billie Eilish Tribute
+                </p>
             </div>
+
         </div>
 
         <div class="panel-right hero-right">
+
             <div class="mini-grid">
+
                 <div>
-                    <h4>Date</h4>
-                    <p>13 OKT 2026</p>
+                    <h4 data-i18n="dateLabel">Datum</h4>
+                    <p data-i18n="dateValue">13 OKT 2026</p>
                 </div>
+
                 <div>
-                    <h4>Doors</h4>
+                    <h4 data-i18n="doorsLabel">Deuren</h4>
                     <p>18:30</p>
                 </div>
+
                 <div>
-                    <h4>Start</h4>
+                    <h4 data-i18n="startLabel">Start</h4>
                     <p>19:00</p>
                 </div>
+
                 <div>
-                    <h4>End</h4>
+                    <h4 data-i18n="endLabel">Einde</h4>
                     <p>± 22:00</p>
                 </div>
+
             </div>
 
             <a href="#location" class="hero-location-link">
+
                 <div class="hero-location">
-                    <p><strong>Kavka Oudaan</strong></p>
-                    <p>Oudaan 14, Antwerp</p>
+
+                    <p>
+                        <strong>Kavka Oudaan</strong>
+                    </p>
+
+                    <p data-i18n="venueAddress">
+                        Oudaan 14, 2000 Antwerpen
+                    </p>
+
                 </div>
+
             </a>
+
         </div>
 
     </div>
+
 </section>
 
 
-<!-- ========================
-     ARTISTS
-======================== -->
+<!-- ARTISTS -->
 <section id="artists">
-    <h2>Wie zijn wij</h2>
+
+    <h2 data-i18n="artistsTitle">
+        Wie zijn wij
+    </h2>
+
     <div class="lineup">
 
         <!-- AXL -->
         <div class="card" onclick="toggleArtist(this)">
+
             <img src="assets/AXL.jpg" alt="AXL">
+
             <h3>AXL</h3>
-            <span class="arrow"><img src="./assets/down-arrow.png" alt="Arrow"></span>
+
+            <span class="arrow">
+                <img src="./assets/down-arrow.png" alt="Arrow">
+            </span>
+
             <div class="expand">
-                <a class="ig-badge" href="https://www.instagram.com/axl.officialmusic/" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram">
+
+                <a class="ig-badge"
+                   href="https://www.instagram.com/axl.officialmusic/"
+                   target="_blank">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                         alt="instagram">
+
                     @axl.officialmusic
+
                 </a>
+
                 <div class="tags">
-                    <span>Emotional</span>
-                    <span>Atmospheric</span>
-                    <span>Self Reflection</span>
-                    <span>Community</span>
+
+                    <span data-i18n="tagEmotional">Emotioneel</span>
+                    <span data-i18n="tagAtmospheric">Atmosferisch</span>
+                    <span data-i18n="tagReflection">Zelfreflectie</span>
+                    <span data-i18n="tagCommunity">Verbinding</span>
+
                 </div>
+
                 <div class="divider"></div>
-                <p>AXL maakt emotionele, atmosferische muziek waarin persoonlijke groei en innerlijke strijd samenkomen tot een gevoel van verbinding.</p>
+
+                <p data-i18n="axlDescription">
+
+                    AXL maakt emotionele, atmosferische muziek
+                    waarin persoonlijke groei en innerlijke strijd
+                    samenkomen tot een gevoel van verbinding.
+
+                </p>
                 <iframe style="border-radius:12px"
                         src="https://open.spotify.com/embed/artist/4j5gqj7ZoBb9W6IhiIrGa8?utm_source=generator&theme=0"
                         width="100%" height="152" frameborder="0"
@@ -141,26 +250,52 @@
                         loading="lazy">
                 </iframe>
             </div>
+
         </div>
+
 
         <!-- SHAZZA -->
         <div class="card" onclick="toggleArtist(this)">
+
             <img src="assets/SHAZZA.jpg" alt="SHAZZA">
+
             <h3>SHAZZA</h3>
-            <span class="arrow"><img src="./assets/down-arrow.png" alt="Arrow"></span>
+
+            <span class="arrow">
+                <img src="./assets/down-arrow.png" alt="Arrow">
+            </span>
+
             <div class="expand">
-                <a class="ig-badge" href="https://www.instagram.com/shazza_official/" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram">
+
+                <a class="ig-badge"
+                   href="https://www.instagram.com/shazza_official/"
+                   target="_blank">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                         alt="instagram">
+
                     @shazza_official
+
                 </a>
+
                 <div class="tags">
-                    <span>Emotional</span>
-                    <span>Pop</span>
-                    <span>Vulnerable</span>
-                    <span>Authentic</span>
+
+                    <span data-i18n="tagEmotional">Emotioneel</span>
+                    <span data-i18n="tagPop">Pop</span>
+                    <span data-i18n="tagVulnerable">Kwetsbaar</span>
+                    <span data-i18n="tagAuthentic">Authentiek</span>
+
                 </div>
+
                 <div class="divider"></div>
-                <p>SHAZZA maakt popmuziek en covers die kwetsbaarheid omzetten in herkenbare verhalen voor mensen die diep voelen.</p>
+
+                <p data-i18n="shazzaDescription">
+
+                    SHAZZA maakt popmuziek en covers
+                    die kwetsbaarheid omzetten
+                    in herkenbare verhalen.
+
+                </p>
                 <iframe style="border-radius:12px"
                         src="https://open.spotify.com/embed/artist/3XjfsUZKcn4jQNlfxdZPBQ?utm_source=generator&theme=0"
                         width="100%" height="152" frameborder="0"
@@ -168,122 +303,254 @@
                         loading="lazy">
                 </iframe>
             </div>
+
         </div>
 
     </div>
+
 </section>
 
 
-<!-- ========================
-     LOCATION
-======================== -->
+<!-- LOCATION -->
 <section id="location">
-    <h2>Locatie</h2>
+
+    <h2 data-i18n="locationTitle">
+        Locatie
+    </h2>
 
     <div class="panel-card venue-card">
 
         <div class="panel-left venue-left">
-            <h3>KAVKA OUDAAN - ANTWERPEN</h3>
-            <p class="venue-sub">Oudaan 14, 2000 Antwerp</p>
+
+            <h3 data-i18n="venueTitle">
+                KAVKA OUDAAN - ANTWERPEN
+            </h3>
+
+            <p class="venue-sub" data-i18n="venueAddress">
+                Oudaan 14, 2000 Antwerpen
+            </p>
 
             <div class="venue-links">
-                <a href="https://kavka.be/" target="_blank">Officiële website</a>
-                <a href="https://kavka.be/praktisch/faq/" target="_blank">Policies & FAQ</a>
+
+                <a href="https://kavka.be/"
+                   target="_blank"
+                   data-i18n="officialWebsite">
+
+                    Officiële website
+
+                </a>
+
+                <a href="https://kavka.be/praktisch/faq/"
+                   target="_blank"
+                   data-i18n="faq">
+
+                    Policies & FAQ
+
+                </a>
+
             </div>
 
             <div class="venue-info-grid">
-                <div class="info-card">
-                    <h4>Transport</h4>
-                    <p>Near Antwerp Central Station<br>Tram & bus nearby</p>
-                </div>
-                <div class="info-card">
-                    <h4>Parking</h4>
-                    <p>Paid parking in the city center</p>
-                </div>
-                <div class="info-card">
-                    <h4>Accessibility</h4>
-                    <p>Wheelchair accessible venue</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="panel-right venue-right">
-            <div class="map-container">
-                <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.186203969298!2d4.403116600000001!3d51.21564540000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f098f36b77%3A0x44f52b58b62fbe6d!2sKavka%20Oudaan!5e0!3m2!1snl!2sus!4v1778024438034!5m2!1snl!2sus">
-                </iframe>
+                <div class="info-card">
+
+                    <h4 data-i18n="transportTitle">
+                        Transport
+                    </h4>
+
+                    <p data-i18n="transportText">
+                        Dicht bij Antwerpen Centraal<br>
+                        Tram & bus dichtbij
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <h4 data-i18n="parkingTitle">
+                        Parking
+                    </h4>
+
+                    <p data-i18n="parkingText">
+                        Betaald parkeren in het stadscentrum
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <h4 data-i18n="accessibilityTitle">
+                        Toegankelijkheid
+                    </h4>
+
+                    <p data-i18n="accessibilityText">
+                        Rolstoeltoegankelijke locatie
+                    </p>
+
+                </div>
+
             </div>
+
         </div>
 
     </div>
+
 </section>
 
 
-<!-- ========================
-     TICKETS
-======================== -->
+<!-- TICKETS -->
 <section id="tickets" class="tickets-section">
-    <h2>Tickets</h2>
+
+    <h2 data-i18n="ticketsTitle">
+        Tickets
+    </h2>
 
     <div class="panel-card tickets-card">
 
         <div class="tickets-main">
-            <h3>General Admission</h3>
-            <p class="price">From <strong>€12.50</strong></p>
-            <p class="note">Limited capacity — once sold out, no additional tickets will be released.</p>
-            <a class="cta-button" href="https://eventbrite.com">Buy Tickets</a>
+
+            <h3 data-i18n="generalAdmission">
+                Algemene toegang
+            </h3>
+
+            <p class="price">
+                <span data-i18n="fromLabel">Vanaf</span>
+                <strong>€12.50</strong>
+            </p>
+
+            <p class="note" data-i18n="ticketNote">
+
+                Beperkte capaciteit —
+                eenmaal uitverkocht komen er
+                geen extra tickets.
+
+            </p>
+
+            <a class="cta-button"
+               href="https://eventbrite.com"
+               data-i18n="buyTickets">
+
+                Koop Tickets
+
+            </a>
+
         </div>
 
         <div class="tickets-side">
+
             <div class="ticket-info">
-                <h4>Refund policy</h4>
-                <p>No refunds unless event is cancelled</p>
+
+                <h4 data-i18n="refundTitle">
+                    Refund policy
+                </h4>
+
+                <p data-i18n="refundText">
+                    Geen refunds tenzij event geannuleerd wordt
+                </p>
+
             </div>
+
             <div class="ticket-info">
-                <h4>Entry</h4>
-                <p>One-time scan QR ticket</p>
+
+                <h4 data-i18n="entryTitle">
+                    Toegang
+                </h4>
+
+                <p data-i18n="entryText">
+                    Eenmalige QR-ticket scan
+                </p>
+
             </div>
+
             <div class="ticket-info">
-                <h4>Tip</h4>
-                <p>Doors open 30 min before start</p>
+
+                <h4 data-i18n="tipTitle">
+                    Tip
+                </h4>
+
+                <p data-i18n="tipText">
+                    Deuren openen 30 min voor start
+                </p>
+
             </div>
+
         </div>
 
     </div>
+
 </section>
 
 
-<!-- ========================
-     PRACTICAL INFO
-======================== -->
+<!-- PRACTICAL INFO -->
 <section>
-    <h2>Practical info</h2>
+
+    <h2 data-i18n="practicalInfoTitle">
+        Praktische info
+    </h2>
+
     <div class="info-grid">
+
         <div class="info-card">
-            <h3>Inside</h3>
-            <p>Bar available in the venue</p>
+
+            <h3 data-i18n="insideTitle">
+                Binnen
+            </h3>
+
+            <p data-i18n="insideText">
+                Bar aanwezig in de zaal
+            </p>
+
         </div>
+
         <div class="info-card">
-            <h3>Vibe</h3>
-            <p>Intimate, emotional, respectful crowd</p>
+
+            <h3 data-i18n="vibeTitle">
+                Sfeer
+            </h3>
+
+            <p data-i18n="vibeText">
+                Intieme, emotionele en respectvolle sfeer
+            </p>
+
         </div>
+
         <div class="info-card">
-            <h3>Audience</h3>
-            <p>Everyone is welcome</p>
+
+            <h3 data-i18n="audienceTitle">
+                Publiek
+            </h3>
+
+            <p data-i18n="audienceText">
+                Iedereen is welkom
+            </p>
+
         </div>
+
     </div>
+
 </section>
 
 
-<!-- ========================
-     FOOTER & DECORATIONS
-======================== -->
-<footer>© 2026 AXL & SHAZZA PRESENT — Alle rechten voorbehouden</footer>
+<!-- FOOTER -->
+<footer data-i18n="footerText">
+
+    © 2026 AXL & SHAZZA PRESENT —
+    Alle rechten voorbehouden
+
+</footer>
 
 <div class="side-glow left"></div>
 <div class="side-glow right"></div>
 
-<a href="#artists" class="floating-artists-btn" onclick="openArtists()">Wie zijn wij</a>
+<a
+        href="#artists"
+        class="floating-artists-btn"
+        onclick="openArtists()"
+        data-i18n="artistsTitle">
+
+    Wie zijn wij
+
+</a>
 
 </body>
 </html>
