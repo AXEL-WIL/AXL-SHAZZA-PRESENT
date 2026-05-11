@@ -677,7 +677,13 @@ footer {
 }
 
 
-/* READ MORE (about section mobile)*/
+/* Hidden on Poster */
+.hidden-on-poster {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
 
 /* Hidden on desktop */
 .read-more-btn { display: none; }
@@ -716,7 +722,7 @@ footer {
 
     /*  Base  */
     body    { line-height: 1.6; }
-    section { padding: 44px 20px; }
+    section { padding: 30px 20px; }
 
     h2 { font-size: 1.3rem; }
     p  { font-size: 0.95rem; }
@@ -765,7 +771,7 @@ footer {
     /*  Artist cards: full width, smaller image  */
     .lineup           { grid-template-columns: 1fr; gap: 12px; }
     .card             { max-width: 100%; padding: 16px; }
-    .card > img       { height: 400px; object-fit: cover; }
+    .card > img       { height: 500px; object-fit: cover; }
     .expand           { font-size: 0.9rem; }
     iframe            { height: 130px; }
 

@@ -3,10 +3,16 @@ let currentLanguage = "nl";
 /* POPUP */
 window.onload = () => {
     document.getElementById("popup").style.display = "flex";
+
+    document.querySelector(".language-switcher").classList.add("hidden-on-poster");
+    document.querySelector(".floating-artists-btn").classList.add("hidden-on-poster");
 };
 
 function closePopup() {
     document.getElementById("popup").style.display = "none";
+
+    document.querySelector(".language-switcher").classList.remove("hidden-on-poster");
+    document.querySelector(".floating-artists-btn").classList.remove("hidden-on-poster");
 }
 
 /* ARTISTS */
