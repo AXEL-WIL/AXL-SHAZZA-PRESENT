@@ -23,16 +23,17 @@
     scrollbar-color: rgba(139, 0, 0, 0.8) #050505;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    background: #000;
+    background: radial-gradient(circle at top, #0f0000 0%, #000000 70%);
+}
 
 
 /* BODY & BACKGROUND*/
 body {
     background: radial-gradient(circle at top, #0f0000 0%, #000000 70%);
     color: var(--text);
-    line-height: 1.6;
-    overflow-x: hidden;
-    position: relative;
+    overscroll-behavior: none;
 }
 
 
@@ -784,14 +785,16 @@ footer {
     .venue-left h3  { font-size: 1.1rem; }
 
     .venue-info-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-        margin-top: 14px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 15px;
     }
 
     .venue-info-grid .info-card {
-        padding: 10px 8px;
-        text-align: center;
+        width: 100%;
+        text-align: left;
+        padding: 14px;
     }
 
     .venue-info-grid .info-card h4 { font-size: 0.7rem; opacity: 0.6; margin-bottom: 4px; }
