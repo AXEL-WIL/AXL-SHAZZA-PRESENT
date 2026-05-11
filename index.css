@@ -23,17 +23,16 @@
     scrollbar-color: rgba(139, 0, 0, 0.8) #050505;
 }
 
-html {
-    background: #000;
-    background: radial-gradient(circle at top, #0f0000 0%, #000000 70%);
-}
+html { scroll-behavior: smooth; }
 
 
 /* BODY & BACKGROUND*/
 body {
     background: radial-gradient(circle at top, #0f0000 0%, #000000 70%);
     color: var(--text);
-    overscroll-behavior: none;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
 }
 
 
