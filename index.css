@@ -25,6 +25,52 @@
 
 html { scroll-behavior: smooth; }
 
+/* Main Title */
+h1 {
+    font-family: "Anton", sans-serif;
+    font-size: clamp(4rem, 10vw, 8rem);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    line-height: 0.9;
+    font-weight: 400;
+}
+
+/* Section Titles */
+h2 {
+    font-family: "Anton", sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    font-weight: 400;
+}
+
+/* Card Titles */
+h3 {
+    font-family: "Anton", sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 400;
+}
+
+/* Small Titles */
+h4 {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Body Text */
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    font-weight: 400;
+    letter-spacing: .03em;
+}
 
 /* BODY & BACKGROUND*/
 body {
