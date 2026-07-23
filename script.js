@@ -186,7 +186,7 @@ const translations = {
 
         practicalInfoTitle: "Praktische info",
 
-        insideTitle: "Binnen",
+        insideTitle: "Zaal",
 
         insideText:
             "Bar aanwezig in de zaal",
@@ -312,7 +312,7 @@ const translations = {
 
         practicalInfoTitle: "Practical info",
 
-        insideTitle: "Inside",
+        insideTitle: "Venue",
 
         insideText:
             "Bar available inside the venue",
