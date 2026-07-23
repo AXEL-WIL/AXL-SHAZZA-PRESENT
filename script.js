@@ -68,6 +68,14 @@ function updateReadMoreButton() {
     }
 }
 
+function toggleMiniMusic(){
+
+    const player = document.querySelector(".mini-music-popup");
+
+    player.classList.toggle("open");
+
+}
+
 /* TRANSLATIONS */
 const translations = {
 
