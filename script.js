@@ -117,7 +117,7 @@ const translations = {
         dateLabel: "Datum",
         dateValue: "13 OKT 2026",
 
-        doorsLabel: "Deuren",
+        doorsLabel: "Deuren Open",
         startLabel: "Start",
         endLabel: "Einde",
 
