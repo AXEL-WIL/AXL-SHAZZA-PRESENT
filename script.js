@@ -6,6 +6,7 @@ window.onload = () => {
 
     document.querySelector(".language-switcher").classList.add("hidden-on-poster");
     document.querySelector(".floating-artists-btn").classList.add("hidden-on-poster");
+    document.querySelector(".mini-music-player").classList.add("hidden-on-poster");
 };
 
 function closePopup() {
@@ -13,6 +14,7 @@ function closePopup() {
 
     document.querySelector(".language-switcher").classList.remove("hidden-on-poster");
     document.querySelector(".floating-artists-btn").classList.remove("hidden-on-poster");
+    document.querySelector(".mini-music-player").classList.remove("hidden-on-poster");
 }
 
 /* ARTISTS */
@@ -167,7 +169,7 @@ const translations = {
         fromLabel: "Vanaf",
 
         ticketNote:
-            "Beperkte capaciteit — eenmaal uitverkocht komen er geen extra tickets.",
+            "Beperkte capaciteit, eenmaal uitverkocht komen er geen extra tickets.",
 
         refundTitle: "Refund policy",
 
@@ -202,7 +204,7 @@ const translations = {
             "Iedereen is welkom",
 
         footerText:
-            "© 2026 AXL & SHAZZA PRESENT — Alle rechten voorbehouden"
+            "© 2026 AXL & SHAZZA PRESENT • Alle rechten voorbehouden"
     },
 
     en: {
@@ -226,7 +228,7 @@ const translations = {
         aboutTitle: "About the event",
 
         aboutText:
-            "An evening inspired by the world of Billie Eilish: intimate, dark yet warm and vulnerable. Expect a live band, subtle but intense lighting and a performance that amplifies every emotion. Together with a close-knit group of fans we create a shared moment that feels like one deep breath in the dark, a memory that lingers.",
+            "An evening inspired by the world of Billie Eilish: intimate, dark yet warm and vulnerable. Expect a live band, subtle but intense lighting and a performance that amplifies every emotion. Together with a close group of fans we create a shared moment that feels like one deep breath in the dark, a memory that lingers.",
 
         readMore: "Read more",
         readLess: "Read less",
@@ -293,7 +295,7 @@ const translations = {
         fromLabel: "From",
 
         ticketNote:
-            "Limited capacity — once sold out, no additional tickets will be released.",
+            "Limited capacity, once sold out, no additional tickets will be released.",
 
         refundTitle: "Refund policy",
 
@@ -328,7 +330,7 @@ const translations = {
             "Everyone is welcome",
 
         footerText:
-            "© 2026 AXL & SHAZZA PRESENT — All rights reserved"
+            "© 2026 AXL & SHAZZA PRESENT • All rights reserved"
     }
 };
 
