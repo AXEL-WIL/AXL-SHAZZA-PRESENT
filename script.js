@@ -84,20 +84,17 @@ const translations = {
     nl: {
 
         popupTitle: "AANKOMENDE SHOW",
-        buyTicketsPopup: "TICKETS BINNENKORT BESCHIKBAAR",
-        //buyTicketsPopup: "KOOP TICKETS",
+        buyTicketsPopup: "KOOP TICKETS",
 
         headerTitle1: "AXL & SHAZZA PRESENT",
         headerTitle2: "THE <u>BILLIE EILISH</u> TRIBUTE",
 
         eventDate: "13 OKT 2026 • Kavka Oudaan",
 
-        buyTickets: "Tickets Binnenkort Beschikbaar",
-        //buyTickets: "Koop Tickets",
+        buyTickets: "Koop Tickets",
 
         announcementBar:
-             "TICKETS BINNENKORT BESCHIKBAAR • AXL & SHAZZA PRESENT BILLIE EILISH • NIEUWE SHOW • TICKETS BINNENKORT BESCHIKBAAR •",
-        //    "TICKETS BESCHIKBAAR • AXL & SHAZZA PRESENT BILLIE EILISH • NIEUWE SHOW • TICKETS BESCHIKBAAR •",
+            "TICKETS BESCHIKBAAR • AXL & SHAZZA PRESENT BILLIE EILISH • NIEUWE SHOW • TICKETS BESCHIKBAAR •",
 
         aboutTitle: "Over het event",
 
@@ -210,20 +207,17 @@ const translations = {
     en: {
 
         popupTitle: "UPCOMING SHOW",
-        buyTicketsPopup: "TICKETS FOR SALE SOON",
-        //buyTicketsPopup: "BUY TICKETS",
+        buyTicketsPopup: "BUY TICKETS",
 
         headerTitle1: "AXL & SHAZZA PRESENT",
         headerTitle2: "THE <u>BILLIE EILISH</u> TRIBUTE",
 
         eventDate: "13 OCT 2026 • Kavka Oudaan",
 
-        buyTickets: "Tickets For Sale Soon",
-        //buyTickets: "Buy Tickets",
+        buyTickets: "Buy Tickets",
 
         announcementBar:
-            "TICKETS ON SALE SOON • AXL & SHAZZA PRESENT BILLIE EILISH • NEW SHOW • TICKETS ON SALE SOON •",
-        //    "TICKETS ON SALE • AXL & SHAZZA PRESENT BILLIE EILISH • NEW SHOW • TICKETS ON SALE •",
+            "TICKETS ON SALE • AXL & SHAZZA PRESENT BILLIE EILISH • NEW SHOW • TICKETS ON SALE •",
 
         aboutTitle: "About the event",
 
