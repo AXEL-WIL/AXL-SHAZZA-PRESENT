@@ -188,7 +188,7 @@ const translations = {
         insideTitle: "Zaal",
 
         insideText:
-            "Bar aanwezig in de zaal",
+            "Bar aanwezig in de zaal \n CARD ONLY",
 
         vibeTitle: "Sfeer",
 
@@ -311,7 +311,7 @@ const translations = {
         insideTitle: "Venue",
 
         insideText:
-            "Bar available inside the venue",
+            "Bar available inside the venue \n CARD ONLY",
 
         vibeTitle: "Vibe",
 

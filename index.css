@@ -153,7 +153,7 @@ body {
 header {
     background: linear-gradient(145deg, #0a0000, #120000);
     color: white;
-    padding: 100px 20px;
+    padding: 100px 20px 40px;
     text-align: center;
     position: relative;
 }
@@ -179,6 +179,54 @@ header p {
     }
     100% {
         opacity: 1;
+    }
+}
+
+/* TikTok link */
+.tiktok-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    position: relative;
+    margin-top:20px;
+    left:-5px;
+}
+
+/* Rood lijntje bij hover */
+.tiktok-link a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #ff0000;
+    transition: width 0.3s ease;
+}
+
+.tiktok-link a:hover::after {
+    width: 100%;
+}
+
+.tiktok-logo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .tiktok-link a {
+        font-size: 1rem;
+    }
+
+    .tiktok-logo {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -1125,7 +1173,7 @@ footer {
 
     /*  Header: less padding, smaller title, more air  */
     header {
-        padding: 60px 24px 50px;
+        padding: 60px 24px 25px;
     }
 
     header h1 {
