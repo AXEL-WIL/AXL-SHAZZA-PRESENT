@@ -46,14 +46,14 @@ const translations = {
         headerTitle1: "AXL & SHAZZA PRESENT",
         headerTitle2: "THE <u>BILLIE EILISH</u> TRIBUTE",
 
-        eventDate: "Show van 13 OKT 2026 • Kavka Oudaan",
+        eventDate: "Recentste show op 13 OKT 2026 • Kavka Oudaan",
 
         viewPhotos: "Bekijk alle foto's",
 
         announcementBar:
             "FOTO'S ONLINE • AANKONDIGING BINNENKORT • BEDANKT VOOR DE AVOND • FOTO'S ONLINE • AANKONDIGING BINNENKORT •",
 
-        aboutTitle: "Onze laatste show",
+        aboutTitle: "Onze recente show",
 
         aboutText:
             "Op 13 oktober 2026 stonden we in Kavka Oudaan met onze Billie Eilish tribute: een intieme, donkere en tegelijk warme avond met live band en lichtshow. Bedankt aan iedereen die erbij was en er samen met ons één grote ademhaling in het donker van maakte. Een herinnering die blijft hangen.",
@@ -77,6 +77,9 @@ const translations = {
         photosHighlightSub: "Bekijk de beelden van de avond",
 
         photosTitle: "Foto's",
+
+        tiktokTitle: "Onze TikToks",
+        followTiktok: "Volg ons op TikTok",
 
         artistsTitle: "Wie zijn wij",
 
@@ -109,14 +112,14 @@ const translations = {
         headerTitle1: "AXL & SHAZZA PRESENT",
         headerTitle2: "THE <u>BILLIE EILISH</u> TRIBUTE",
 
-        eventDate: "Show of 13 OCT 2026 • Kavka Oudaan",
+        eventDate: "Recent show on 13 OCT 2026 • Kavka Oudaan",
 
         viewPhotos: "View all photos",
 
         announcementBar:
             "PHOTOS ONLINE • ANNOUNCEMENT COMING SOON • THANK YOU FOR THE NIGHT • PHOTOS ONLINE • ANNOUNCEMENT COMING SOON •",
 
-        aboutTitle: "Our last show",
+        aboutTitle: "Our recent show",
 
         aboutText:
             "On 13 October 2026 we took the stage at Kavka Oudaan with our Billie Eilish tribute: an intimate, dark yet warm evening with a live band and light show. Thank you to everyone who was there and made it one deep breath in the dark with us. A memory that lingers.",
@@ -140,6 +143,9 @@ const translations = {
         photosHighlightSub: "Relive the night",
 
         photosTitle: "Photos",
+
+        tiktokTitle: "Our TikToks",
+        followTiktok: "Follow us on TikTok",
 
         artistsTitle: "Who are we",
 

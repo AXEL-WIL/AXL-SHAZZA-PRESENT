@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto's • AXL & SHAZZA</title>
+
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .gallery-page { max-width: 1100px; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--text); text-decoration: none; opacity: .8; }
+        .back-link:hover { opacity: 1; }
+
+        .gallery { columns: 3; column-gap: 12px; }
+        .gallery-item {
+            position: relative; display: block; width: 100%; margin: 0 0 12px; padding: 0;
+            break-inside: avoid; overflow: hidden; cursor: zoom-in;
+            border-radius: 12px; border: 1px solid var(--card-border);
+            box-shadow: var(--card-shadow); background: #0a0000;
+        }
+        .gallery-item img {
+            display: block; width: 100%; height: auto;
+            filter: brightness(.85) contrast(1.15);
+            transition: transform .4s ease, filter .4s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.04); filter: brightness(1) contrast(1.1); }
+
+        .photo-credit {
+            position: absolute; right: 8px; bottom: 8px; max-width: calc(100% - 16px);
+            padding: 3px 8px; border-radius: 999px;
+            background: rgba(0,0,0,.6); border: 1px solid rgba(255,255,255,.12);
+            color: rgba(255,255,255,.85); font-size: .62rem; line-height: 1.4;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none;
+        }
+
+        .gallery-credit { text-align: center; margin-top: 30px; opacity: .7; font-size: .9rem; }
+        .gallery-credit a { color: var(--text); }
+
+        /* LIGHTBOX */
+        .lightbox {
+            position: fixed; inset: 0; z-index: 2000; display: none;
+            align-items: center; justify-content: center;
+            background: rgba(0,0,0,.92); backdrop-filter: blur(8px);
+        }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: 92vw; max-height: 86vh; border-radius: 10px; box-shadow: 0 0 40px rgba(52,69,184,.5), 0 0 40px rgba(139,0,0,.4); }
+        .lightbox-caption { position: absolute; bottom: 18px; left: 0; right: 0; text-align: center; font-size: .8rem; opacity: .7; }
+        .lb-btn {
+            position: absolute; border: none; cursor: pointer; color: #fff; font-size: 1.8rem;
+            width: 46px; height: 46px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--red-glow), var(--blue-glow));
+        }
+        .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+        .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
+        .lb-close { top: 16px; right: 16px; font-size: 1.2rem; }
+
+        @media (max-width: 900px) { .gallery { columns: 2; } }
+        @media (max-width: 520px) {
+            .gallery { column-gap: 8px; }
+            .gallery-item { margin-bottom: 8px; }
+            .photo-credit { font-size: .55rem; right: 6px; bottom: 6px; }
+            .lb-prev { left: 6px; } .lb-next { right: 6px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="gallery-page">
+
+    <a class="back-link" href="index.html" id="backLink">← Terug</a>
+
+    <h2 id="galleryTitle">Foto's</h2>
+    <p id="gallerySub" style="margin-bottom:24px">De show van 13 OKT 2026 • Kavka Oudaan</p>
+
+    <div class="gallery" id="gallery"></div>
+
+    <p class="gallery-credit">
+        © Fotografie Jules van Iperen •
+        <a href="https://instagram.com/julesvaniperen" target="_blank" rel="noopener" id="origLink">CONTACT</a>
+    </p>
+
+</section>
+
+<div class="lightbox" id="lightbox">
+    <button class="lb-btn lb-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+    <button class="lb-btn lb-prev" onclick="stepLightbox(-1)" aria-label="Previous">‹</button>
+    <img id="lbImg" alt="">
+    <button class="lb-btn lb-next" onclick="stepLightbox(1)" aria-label="Next">›</button>
+    <div class="lightbox-caption">© Fotografie Jules van Iperen</div>
+</div>
+
+<div class="side-glow left"></div>
+<div class="side-glow right"></div>
+
+<script>
+    const BASE = "./assets/photos/";
+
+    const photos = Array.from({ length: 79 }, (_, i) => i + 1)
+        .filter(n => n !== 25)
+        .map(n => `show-${n}.jpg`);
+    const gallery = document.getElementById("gallery");
+    let current = 0;
+
+    photos.forEach((name, i) => {
+        const b = document.createElement("button");
+        b.className = "gallery-item";
+        b.innerHTML = `<img src="${BASE}/${name}" alt="Foto ${i + 1}" loading="lazy">` +
+            `<span class="photo-credit">© Fotografie Jules van Iperen</span>`;
+        b.onclick = () => openLightbox(i);
+        gallery.appendChild(b);
+    });
+
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lbImg");
+
+    function show(i) {
+        current = (i + photos.length) % photos.length;
+        lbImg.src = `${BASE}/${photos[current]}`;
+    }
+    function openLightbox(i) { show(i); lb.classList.add("open"); }
+    function closeLightbox() { lb.classList.remove("open"); lbImg.src = ""; }
+    function stepLightbox(d) { show(current + d); }
+
+    lb.addEventListener("click", e => { if (e.target === lb) closeLightbox(); });
+    document.addEventListener("keydown", e => {
+        if (!lb.classList.contains("open")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") stepLightbox(-1);
+        if (e.key === "ArrowRight") stepLightbox(1);
+    });
+
+    if (localStorage.getItem("language") === "en") {
+        document.documentElement.lang = "en";
+        document.title = "Photos • AXL & SHAZZA";
+        document.getElementById("backLink").textContent = "← Back";
+        document.getElementById("galleryTitle").textContent = "Photos";
+        document.getElementById("gallerySub").textContent = "The show of 13 OCT 2026 • Kavka Oudaan";
+        document.getElementById("origLink").textContent = "Original gallery";
+    }
+</script>
+
+</body>
+</html>

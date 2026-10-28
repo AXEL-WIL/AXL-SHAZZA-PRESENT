@@ -1428,9 +1428,61 @@ footer {
     justify-content: center;
 }
 
+
+/* PHOTO COPYRIGHT LABEL (append to index.css) */
+.photo-item {
+    position: relative;
+}
+
+.photo-credit {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    max-width: calc(100% - 16px);
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(4px);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.62rem;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .photo-credit {
+        font-size: 0.55rem;
+        right: 6px;
+        bottom: 6px;
+        padding: 2px 6px;
+    }
+}
+
+
 @media (max-width: 768px) {
     .photo-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
     }
+}
+
+/* TIKTOK SECTION (append to index.css) */
+.tiktok-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tiktok-grid blockquote {
+    margin: 0 !important;
+}
+
+#tiktoks .center-row {
+    margin-top: 10px;
 }
