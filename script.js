@@ -1,35 +1,15 @@
 let currentLanguage = "nl";
 
-/* POPUP */
-window.onload = () => {
-    document.getElementById("popup").style.display = "flex";
-
-    document.querySelector(".language-switcher").classList.add("hidden-on-poster");
-    document.querySelector(".floating-artists-btn").classList.add("hidden-on-poster");
-    document.querySelector(".mini-music-player").classList.add("hidden-on-poster");
-};
-
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-
-    document.querySelector(".language-switcher").classList.remove("hidden-on-poster");
-    document.querySelector(".floating-artists-btn").classList.remove("hidden-on-poster");
-    document.querySelector(".mini-music-player").classList.remove("hidden-on-poster");
-}
-
 /* ARTISTS */
 function toggleArtist(card) {
     card.classList.toggle("active");
 }
 
 function openArtists() {
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach(card => {
+    document.querySelectorAll(".card").forEach(card => {
         card.classList.add("active");
     });
 }
-
 
 /* READ MORE */
 document.addEventListener("DOMContentLoaded", () => {
@@ -37,18 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const section = document.querySelector(".about-text");
     const btn = document.getElementById("readMoreBtn");
 
-    if (!section || !btn) return;
+    if (section && btn) {
+        btn.addEventListener("click", () => {
+            section.classList.toggle("expanded");
+            updateReadMoreButton();
+        });
+    }
 
-    btn.addEventListener("click", () => {
-
-        section.classList.toggle("expanded");
-
-        updateReadMoreButton();
-    });
-
-    const savedLang = localStorage.getItem("language") || "nl";
-
-    setLanguage(savedLang);
+    setLanguage(localStorage.getItem("language") || "nl");
 });
 
 function updateReadMoreButton() {
@@ -58,65 +34,49 @@ function updateReadMoreButton() {
 
     if (!section || !btn) return;
 
-    if (section.classList.contains("expanded")) {
-
-        btn.textContent =
-            translations[currentLanguage].readLess;
-
-    } else {
-
-        btn.textContent =
-            translations[currentLanguage].readMore;
-    }
-}
-
-function toggleMiniMusic(){
-
-    const player = document.querySelector(".mini-music-popup");
-
-    player.classList.toggle("open");
-
+    btn.textContent = section.classList.contains("expanded")
+        ? translations[currentLanguage].readLess
+        : translations[currentLanguage].readMore;
 }
 
 /* TRANSLATIONS */
 const translations = {
 
     nl: {
-
-        popupTitle: "AANKOMENDE SHOW",
-        buyTicketsPopup: "KOOP TICKETS",
-
         headerTitle1: "AXL & SHAZZA PRESENT",
         headerTitle2: "THE <u>BILLIE EILISH</u> TRIBUTE",
 
-        eventDate: "13 OKT 2026 • Kavka Oudaan",
+        eventDate: "Show van 13 OKT 2026 • Kavka Oudaan",
 
-        buyTickets: "Koop Tickets",
+        viewPhotos: "Bekijk alle foto's",
 
         announcementBar:
-            "TICKETS BESCHIKBAAR • AXL & SHAZZA PRESENT BILLIE EILISH • NIEUWE SHOW • TICKETS BESCHIKBAAR •",
+            "FOTO'S ONLINE • AANKONDIGING BINNENKORT • BEDANKT VOOR DE AVOND • FOTO'S ONLINE • AANKONDIGING BINNENKORT •",
 
-        aboutTitle: "Over het event",
+        aboutTitle: "Onze laatste show",
 
         aboutText:
-            "Een avond geïnspireerd door de wereld van Billie Eilish: intiem, donker en tegelijk warm en kwetsbaar. Verwacht een live band, subtiele maar intense lichtshows en een performance die elke emotie versterkt. Samen met een hechte groep fans creëren we een gedeeld moment dat voelt als één grote ademhaling in het donker, een herinnering die blijft hangen.",
+            "Op 13 oktober 2026 stonden we in Kavka Oudaan met onze Billie Eilish tribute: een intieme, donkere en tegelijk warme avond met live band en lichtshow. Bedankt aan iedereen die erbij was en er samen met ons één grote ademhaling in het donker van maakte. Een herinnering die blijft hangen.",
 
         readMore: "Lees meer",
         readLess: "Lees minder",
 
-        quickInfoTitle: "Event in 30 seconden",
-
-        quickInfoSub:
-            "Alles wat je moet weten voordat je een ticket koopt.",
-
+        quickInfoTitle: "De show in 30 seconden",
+        quickInfoSub: "Een korte terugblik op de avond.",
         tributeText: "The Billie Eilish Tribute",
 
         dateLabel: "Datum",
         dateValue: "13 OKT 2026",
+        venueLabel: "Locatie",
+        cityLabel: "Stad",
+        cityValue: "Antwerpen",
+        nextLabel: "Volgende show",
+        nextValue: "Binnenkort",
 
-        doorsLabel: "Deuren Open",
-        startLabel: "Start",
-        endLabel: "Einde",
+        photosHighlight: "De foto's zijn online",
+        photosHighlightSub: "Bekijk de beelden van de avond",
+
+        photosTitle: "Foto's",
 
         artistsTitle: "Wie zijn wij",
 
@@ -134,112 +94,52 @@ const translations = {
         shazzaDescription:
             "SHAZZA maakt popmuziek en covers die kwetsbaarheid omzetten in herkenbare verhalen.",
 
-        locationTitle: "Locatie",
+        listenTitle: "Luister naar ons",
 
-        venueTitle: "KAVKA OUDAAN - ANTWERPEN",
-
-        venueAddress: "Oudaan 14, 2000 Antwerpen",
-
-        officialWebsite: "Officiële website",
-
-        faq: "Policies & FAQ",
-
-        transportTitle: "Transport",
-
-        transportText:
-            "Dicht bij Antwerpen Centraal\nTram & bus dichtbij",
-
-        parkingTitle: "Parking",
-
-        parkingText:
-            "Betaald parkeren in het stadscentrum",
-
-        accessibilityTitle: "Toegankelijkheid",
-
-        accessibilityText:
-            "Rolstoeltoegankelijke locatie",
-
-        ticketsTitle: "Tickets",
-
-        generalAdmission: "Algemene toegang",
-
-        fromLabel: "Vanaf",
-
-        ticketNote:
-            "Beperkte capaciteit, eenmaal uitverkocht komen er geen extra tickets.",
-
-        refundTitle: "Refund policy",
-
-        refundText:
-            "Geen refunds tenzij event geannuleerd wordt",
-
-        entryTitle: "Toegang",
-
-        entryText:
-            "Eenmalige QR-ticket scan",
-
-        tipTitle: "Tip",
-
-        tipText:
-            "Deuren openen 30 min voor start",
-
-        practicalInfoTitle: "Praktische info",
-
-        insideTitle: "Zaal",
-
-        insideText:
-            "Bar aanwezig in de zaal \n CARD ONLY",
-
-        vibeTitle: "Sfeer",
-
-        vibeText:
-            "Intieme, emotionele en respectvolle sfeer",
-
-        audienceTitle: "Publiek",
-
-        audienceText:
-            "Iedereen is welkom",
+        soonTitle: "Binnenkort",
+        soonHeading: "Er komt een aankondiging aan",
+        soonText:
+            "We werken aan iets nieuws. Volg ons op TikTok en Instagram zodat je het als eerste weet.",
 
         footerText:
             "© 2026 AXL & SHAZZA PRESENT • Alle rechten voorbehouden"
     },
 
     en: {
-
-        popupTitle: "UPCOMING SHOW",
-        buyTicketsPopup: "BUY TICKETS",
-
         headerTitle1: "AXL & SHAZZA PRESENT",
         headerTitle2: "THE <u>BILLIE EILISH</u> TRIBUTE",
 
-        eventDate: "13 OCT 2026 • Kavka Oudaan",
+        eventDate: "Show of 13 OCT 2026 • Kavka Oudaan",
 
-        buyTickets: "Buy Tickets",
+        viewPhotos: "View all photos",
 
         announcementBar:
-            "TICKETS ON SALE • AXL & SHAZZA PRESENT BILLIE EILISH • NEW SHOW • TICKETS ON SALE •",
+            "PHOTOS ONLINE • ANNOUNCEMENT COMING SOON • THANK YOU FOR THE NIGHT • PHOTOS ONLINE • ANNOUNCEMENT COMING SOON •",
 
-        aboutTitle: "About the event",
+        aboutTitle: "Our last show",
 
         aboutText:
-            "An evening inspired by the world of Billie Eilish: intimate, dark yet warm and vulnerable. Expect a live band, subtle but intense lighting and a performance that amplifies every emotion. Together with a close group of fans we create a shared moment that feels like one deep breath in the dark, a memory that lingers.",
+            "On 13 October 2026 we took the stage at Kavka Oudaan with our Billie Eilish tribute: an intimate, dark yet warm evening with a live band and light show. Thank you to everyone who was there and made it one deep breath in the dark with us. A memory that lingers.",
 
         readMore: "Read more",
         readLess: "Read less",
 
-        quickInfoTitle: "Event in 30 seconds",
-
-        quickInfoSub:
-            "Everything you need to know before buying a ticket.",
-
+        quickInfoTitle: "The show in 30 seconds",
+        quickInfoSub: "A quick look back at the night.",
         tributeText: "The Billie Eilish Tribute",
 
         dateLabel: "Date",
         dateValue: "13 OCT 2026",
+        venueLabel: "Venue",
+        cityLabel: "City",
+        cityValue: "Antwerp",
+        nextLabel: "Next show",
+        nextValue: "Coming soon",
 
-        doorsLabel: "Doors",
-        startLabel: "Start",
-        endLabel: "End",
+        photosHighlight: "The photos are online",
+        photosHighlightSub: "Relive the night",
+
+        photosTitle: "Photos",
 
         artistsTitle: "Who are we",
 
@@ -257,71 +157,12 @@ const translations = {
         shazzaDescription:
             "SHAZZA creates pop music and covers that transform vulnerability into relatable stories.",
 
-        locationTitle: "Location",
+        listenTitle: "Listen to us",
 
-        venueTitle: "KAVKA OUDAAN - ANTWERP",
-
-        venueAddress: "Oudaan 14, 2000 Antwerp",
-
-        officialWebsite: "Official website",
-
-        faq: "Policies & FAQ",
-
-        transportTitle: "Transport",
-
-        transportText:
-            "Near Antwerp Central Station\nTram & bus nearby",
-
-        parkingTitle: "Parking",
-
-        parkingText:
-            "Paid parking in the city center",
-
-        accessibilityTitle: "Accessibility",
-
-        accessibilityText:
-            "Wheelchair accessible venue",
-
-        ticketsTitle: "Tickets",
-
-        generalAdmission: "General Admission",
-
-        fromLabel: "From",
-
-        ticketNote:
-            "Limited capacity, once sold out, no additional tickets will be released.",
-
-        refundTitle: "Refund policy",
-
-        refundText:
-            "No refunds unless the event is cancelled",
-
-        entryTitle: "Entry",
-
-        entryText:
-            "One-time QR ticket scan",
-
-        tipTitle: "Tip",
-
-        tipText:
-            "Doors open 30 min before start",
-
-        practicalInfoTitle: "Practical info",
-
-        insideTitle: "Venue",
-
-        insideText:
-            "Bar available inside the venue \n CARD ONLY",
-
-        vibeTitle: "Vibe",
-
-        vibeText:
-            "Intimate, emotional and respectful atmosphere",
-
-        audienceTitle: "Audience",
-
-        audienceText:
-            "Everyone is welcome",
+        soonTitle: "Coming soon",
+        soonHeading: "An announcement is on its way",
+        soonText:
+            "We're working on something new. Follow us on TikTok and Instagram to be the first to know.",
 
         footerText:
             "© 2026 AXL & SHAZZA PRESENT • All rights reserved"
@@ -336,13 +177,9 @@ function setLanguage(lang) {
     document.documentElement.lang = lang;
 
     document.querySelectorAll("[data-i18n]").forEach(element => {
-
         const key = element.getAttribute("data-i18n");
-
         if (translations[lang][key]) {
-
-            element.innerHTML = translations[lang][key]
-                .replace(/\n/g, "<br>");
+            element.innerHTML = translations[lang][key].replace(/\n/g, "<br>");
         }
     });
 
@@ -350,9 +187,7 @@ function setLanguage(lang) {
 
     updateReadMoreButton();
 
-    document.querySelectorAll(".lang-btn").forEach(btn => {
-        btn.classList.remove("active");
-    });
+    document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
 
     document
         .querySelector(`.lang-btn[onclick="setLanguage('${lang}')"]`)

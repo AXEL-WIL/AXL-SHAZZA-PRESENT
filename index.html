@@ -18,53 +18,15 @@
 
 <body>
 
-<!-- POPUP -->
-<div id="popup" class="popup">
-    <div class="popup-content">
-
-        <span data-i18n="popupTitle">
-            AANKOMENDE SHOW
-        </span>
-
-        <img src="assets/poster.png" alt="Event Poster">
-
-        <a
-                href="https://shop.stamhoofd.be/axlshazzalive"
-                class="cta-button"
-                onclick="closePopup()"
-                data-i18n="buyTicketsPopup">
-
-            BUY TICKETS NOW
-
-        </a>
-
-        <span class="close" onclick="closePopup()">✕</span>
-
-    </div>
-</div>
-
-
 <!-- HEADER -->
 <header>
 
-    <h1 data-i18n="headerTitle1">
-        AXL & SHAZZA PRESENT
-    </h1>
+    <h1 data-i18n="headerTitle1">AXL & SHAZZA PRESENT</h1>
+    <h1 data-i18n="headerTitle2">THE BILLIE EILISH TRIBUTE</h1>
 
-    <h1 data-i18n="headerTitle2">
-        THE BILLIE EILISH TRIBUTE
-    </h1>
+    <p data-i18n="eventDate">13 OKT 2026 • Kavka Oudaan</p>
 
-    <p data-i18n="eventDate">
-        13 OKT 2026 • Kavka Oudaan
-    </p>
-
-    <a
-            data-i18n="buyTickets"
-            class="cta-button"
-            href="https://shop.stamhoofd.be/axlshazzalive">
-
-    </a>
+    <a data-i18n="viewPhotos" class="cta-button" href="photos.html"></a>
 
     <div class="tiktok-link">
         <a href="https://www.tiktok.com/@axlshazzalive">
@@ -83,40 +45,25 @@
 
 <!-- ANNOUNCEMENT BAR -->
 <div class="announcement-bar">
-    <div class="announcement-track" data-i18n="announcementBar">
-    </div>
+    <div class="announcement-track" data-i18n="announcementBar"></div>
 </div>
 
 
-<!-- ABOUT SECTION -->
+<!-- LAST SHOW -->
 <section>
 
-    <h2 data-i18n="aboutTitle">
-        Over het event
-    </h2>
+    <h2 data-i18n="aboutTitle">Onze laatste show</h2>
 
     <div class="about-text">
 
         <p data-i18n="aboutText" style="text-align: justify;">
-
-            Een avond geïnspireerd door de wereld van Billie Eilish:
-            intiem, donker en tegelijk warm en kwetsbaar.
-            Verwacht een live band, subtiele maar intense lichtshows
-            en een performance die elke emotie versterkt.
-            Samen met een hechte groep fans creëren we een gedeeld moment
-            dat voelt als één grote ademhaling in het donker,
-            een herinnering die blijft hangen.
-
+            Op 13 oktober 2026 stonden we in Kavka Oudaan met onze Billie Eilish tribute:
+            een intieme, donkere en tegelijk warme avond met live band en lichtshow.
+            Bedankt aan iedereen die erbij was en er samen met ons één grote ademhaling
+            in het donker van maakte. Een herinnering die blijft hangen.
         </p>
 
-        <button
-                class="read-more-btn"
-                id="readMoreBtn"
-                data-i18n="readMore">
-
-            Lees meer
-
-        </button>
+        <button class="read-more-btn" id="readMoreBtn" data-i18n="readMore">Lees meer</button>
 
     </div>
 
@@ -130,20 +77,13 @@
 
         <div class="panel-left hero-left">
 
-            <h2 data-i18n="quickInfoTitle">
-                Event in 30 seconden
-            </h2>
+            <h2 data-i18n="quickInfoTitle">De show in 30 seconden</h2>
 
-            <p class="sub" data-i18n="quickInfoSub">
-                Alles wat je moet weten voordat je een ticket koopt.
-            </p>
+            <p class="sub" data-i18n="quickInfoSub">Een korte terugblik op de avond.</p>
 
             <div class="hero-highlight">
                 <p><strong>AXL & SHAZZA</strong></p>
-
-                <p data-i18n="tributeText">
-                    The Billie Eilish Tribute
-                </p>
+                <p data-i18n="tributeText">The Billie Eilish Tribute</p>
             </div>
 
         </div>
@@ -158,36 +98,27 @@
                 </div>
 
                 <div>
-                    <h4 data-i18n="doorsLabel">Deuren Open</h4>
-                    <p>18:30</p>
+                    <h4 data-i18n="venueLabel">Locatie</h4>
+                    <p>Kavka Oudaan</p>
                 </div>
 
                 <div>
-                    <h4 data-i18n="startLabel">Start</h4>
-                    <p>19:00</p>
+                    <h4 data-i18n="cityLabel">Stad</h4>
+                    <p data-i18n="cityValue">Antwerpen</p>
                 </div>
 
                 <div>
-                    <h4 data-i18n="endLabel">Einde</h4>
-                    <p>± 22:00</p>
+                    <h4 data-i18n="nextLabel">Volgende show</h4>
+                    <p data-i18n="nextValue">Binnenkort</p>
                 </div>
 
             </div>
 
-            <a href="#location" class="hero-location-link">
-
+            <a href="#photos" class="hero-location-link">
                 <div class="hero-location">
-
-                    <p>
-                        <strong>Kavka Oudaan</strong>
-                    </p>
-
-                    <p data-i18n="venueAddress">
-                        Oudaan 14, 2000 Antwerpen
-                    </p>
-
+                    <p><strong data-i18n="photosHighlight">De foto's zijn online</strong></p>
+                    <p data-i18n="photosHighlightSub">Bekijk de beelden van de avond</p>
                 </div>
-
             </a>
 
         </div>
@@ -197,12 +128,31 @@
 </section>
 
 
+<!-- PHOTOS -->
+<section id="photos">
+
+    <h2 data-i18n="photosTitle">Foto's</h2>
+
+    <div class="photo-grid">
+        <a href="photos.html" class="photo-item"><img src="assets/photos/show-1.jpg" alt="Show foto 1" loading="lazy"></a>
+        <a href="photos.html" class="photo-item"><img src="assets/photos/show-2.jpg" alt="Show foto 2" loading="lazy"></a>
+        <a href="photos.html" class="photo-item"><img src="assets/photos/show-3.jpg" alt="Show foto 3" loading="lazy"></a>
+        <a href="photos.html" class="photo-item"><img src="assets/photos/show-4.jpg" alt="Show foto 4" loading="lazy"></a>
+        <a href="photos.html" class="photo-item"><img src="assets/photos/show-5.jpg" alt="Show foto 5" loading="lazy"></a>
+        <a href="photos.html" class="photo-item"><img src="assets/photos/show-6.jpg" alt="Show foto 6" loading="lazy"></a>
+    </div>
+
+    <div class="center-row">
+        <a class="cta-button" href="photos.html" data-i18n="viewPhotos"></a>
+    </div>
+
+</section>
+
+
 <!-- ARTISTS -->
 <section id="artists">
 
-    <h2 data-i18n="artistsTitle">
-        Wie zijn wij
-    </h2>
+    <h2 data-i18n="artistsTitle">Wie zijn wij</h2>
 
     <div class="lineup">
 
@@ -224,45 +174,33 @@
                     <a class="ig-badge"
                        href="https://www.instagram.com/axl.officialmusic/"
                        target="_blank">
-
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
-                             alt="instagram">
-
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram">
                         @axl.officialmusic
-
                     </a>
 
                     <br>
                     <a class="ig-badge"
                        href="https://axl-music.com/"
                        target="_blank">
-
-                        <img src="https://axl-music.com/wp-content/uploads/2025/09/cropped-logoaxl.png?w=32"
-                             alt="website">
-
+                        <img src="https://axl-music.com/wp-content/uploads/2025/09/cropped-logoaxl.png?w=32" alt="website">
                         axl-music.com
-
                     </a>
 
                 </div>
 
                 <div class="tags">
-
                     <span data-i18n="tagEmotional">Emotioneel</span>
                     <span data-i18n="tagAtmospheric">Atmosferisch</span>
                     <span data-i18n="tagReflection">Zelfreflectie</span>
                     <span data-i18n="tagCommunity">Verbinding</span>
-
                 </div>
 
                 <div class="divider"></div>
 
                 <p data-i18n="axlDescription" style="text-align: justify;">
-
                     AXL maakt emotionele, atmosferische muziek
                     waarin persoonlijke groei en innerlijke strijd
                     samenkomen tot een gevoel van verbinding.
-
                 </p>
                 <iframe style="border-radius:12px"
                         src="https://open.spotify.com/embed/artist/4j5gqj7ZoBb9W6IhiIrGa8?utm_source=generator&theme=0"
@@ -291,43 +229,31 @@
                 <a class="ig-badge"
                    href="https://www.instagram.com/shazza_official/"
                    target="_blank">
-
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
-                         alt="instagram">
-
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram">
                     @shazza_official
-
                 </a>
                 <br>
 
                 <a class="ig-badge"
                    href="https://shazzaofficialmusic.com/"
                    target="_blank">
-
-                    <img src="https://framerusercontent.com/images/d59043T3pi7XOwz8UuSb9eVFxs.jpg"
-                         alt="website">
-
+                    <img src="https://framerusercontent.com/images/d59043T3pi7XOwz8UuSb9eVFxs.jpg" alt="website">
                     shazzaofficialmusic.com
-
                 </a>
 
                 <div class="tags">
-
                     <span data-i18n="tagEmotional">Emotioneel</span>
                     <span data-i18n="tagPop">Pop</span>
                     <span data-i18n="tagVulnerable">Kwetsbaar</span>
                     <span data-i18n="tagAuthentic">Authentiek</span>
-
                 </div>
 
                 <div class="divider"></div>
 
                 <p data-i18n="shazzaDescription" style="text-align: justify;">
-
                     SHAZZA maakt popmuziek en covers
                     die kwetsbaarheid omzetten
                     in herkenbare verhalen.
-
                 </p>
                 <iframe style="border-radius:12px"
                         src="https://open.spotify.com/embed/artist/3XjfsUZKcn4jQNlfxdZPBQ?utm_source=generator&theme=0"
@@ -344,296 +270,49 @@
 </section>
 
 
-<!-- TICKETS -->
-<section id="tickets" class="tickets-section">
+<!-- LISTEN -->
+<section id="listen">
 
-    <h2 data-i18n="ticketsTitle">
-        Tickets
-    </h2>
+    <h2 data-i18n="listenTitle">Luister naar ons</h2>
 
-    <div class="panel-card tickets-card">
-
-        <div class="tickets-main">
-
-            <h3 data-i18n="generalAdmission">
-                Algemene toegang
-            </h3>
-
-            <p class="price">
-                <strong>€12.50</strong>
-            </p>
-
-            <p class="note" data-i18n="ticketNote">
-
-                Beperkte capaciteit —
-                eenmaal uitverkocht komen er
-                geen extra tickets.
-
-            </p>
-
-            <a class="cta-button"
-               href="https://shop.stamhoofd.be/axlshazzalive"
-               data-i18n="buyTickets">
-            </a>
-
-        </div>
-
-        <div class="tickets-side">
-
-            <div class="ticket-info">
-
-                <h4 data-i18n="refundTitle">
-                    Refund policy
-                </h4>
-
-                <p data-i18n="refundText">
-                    Geen refunds tenzij event geannuleerd wordt
-                </p>
-
-            </div>
-
-            <div class="ticket-info">
-
-                <h4 data-i18n="entryTitle">
-                    Toegang
-                </h4>
-
-                <p data-i18n="entryText">
-                    Eenmalige QR-ticket scan
-                </p>
-
-            </div>
-
-            <div class="ticket-info">
-
-                <h4 data-i18n="tipTitle">
-                    Tip
-                </h4>
-
-                <p data-i18n="tipText">
-                    Deuren openen 30 min voor start
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- LOCATION -->
-<section id="location">
-
-    <h2 data-i18n="locationTitle">
-        Locatie
-    </h2>
-
-    <div class="panel-card venue-card">
-
-        <div class="panel-left venue-left">
-
-            <h3 data-i18n="venueTitle">
-                KAVKA OUDAAN - ANTWERPEN
-            </h3>
-
-            <p class="venue-sub" data-i18n="venueAddress">
-                Oudaan 14, 2000 Antwerpen
-            </p>
-
-            <div class="venue-links">
-
-                <a href="https://kavka.be/"
-                   target="_blank"
-                   data-i18n="officialWebsite">
-
-                    Officiële website
-
-                </a>
-
-                <a href="https://kavka.be/praktisch/faq/"
-                   target="_blank"
-                   data-i18n="faq">
-
-                    Policies & FAQ
-
-                </a>
-
-            </div>
-
-            <div class="venue-info-grid">
-                <div class="map-container">
-                    <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4998.372407938596!2d4.403116600000001!3d51.21564540000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f098f36b77%3A0x44f52b58b62fbe6d!2sKavka%20Oudaan!5e0!3m2!1snl!2sus!4v1778465990048!5m2!1snl!2sus"
-                            width="600"
-                            height="450"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                <div class="info-card" style="margin-top: 20px;">
-
-                    <h4 data-i18n="transportTitle">
-                        Transport
-                    </h4>
-
-                    <p data-i18n="transportText">
-                        Dicht bij Antwerpen Centraal<br>
-                        Tram & bus dichtbij
-                    </p>
-
-                </div>
-
-                <div class="info-card">
-
-                    <h4 data-i18n="parkingTitle">
-                        Parking
-                    </h4>
-
-                    <p data-i18n="parkingText">
-                        Betaald parkeren in het stadscentrum
-                    </p>
-
-                </div>
-
-                <div class="info-card">
-
-                    <h4 data-i18n="accessibilityTitle">
-                        Toegankelijkheid
-                    </h4>
-
-                    <p data-i18n="accessibilityText">
-                        Rolstoeltoegankelijke locatie
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PRACTICAL INFO -->
-<section>
-
-    <h2 data-i18n="practicalInfoTitle">
-        Praktische info
-    </h2>
-
-    <div class="info-grid">
-
-        <div class="info-card">
-
-            <h3 data-i18n="insideTitle">
-                Binnen
-            </h3>
-
-            <p data-i18n="insideText">
-                Bar aanwezig in de zaal - CARD ONLY
-            </p>
-
-        </div>
-
-        <div class="info-card">
-
-            <h3 data-i18n="vibeTitle">
-                Sfeer
-            </h3>
-
-            <p data-i18n="vibeText">
-                Intieme, emotionele en respectvolle sfeer
-            </p>
-
-        </div>
-
-        <div class="info-card">
-
-            <h3 data-i18n="audienceTitle">
-                Publiek
-            </h3>
-
-            <p data-i18n="audienceText">
-                Iedereen is welkom
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- MOOD SECTION -->
-<section id="mood">
-
-    <h2 data-i18n="moodTitle">
-        Set The Mood
-    </h2>
-
-
-    <iframe data-testid="embed-iframe" style="border-radius:12px"
-            src="https://open.spotify.com/embed/playlist/37i9dQZF1DX6cg4h2PoN9y?utm_source=generator&theme=0&si=76a2d7421096478f"
-            width="100%" height="352" frameBorder="0" allowfullscreen=""
+    <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/0BkCTQKsKR96xLylJOvVbR?utm_source=generator&theme=0"
+            width="100%" height="352" frameborder="0" allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+</section>
+
+
+<!-- COMING SOON -->
+<section id="soon">
+
+    <h2 data-i18n="soonTitle">Binnenkort</h2>
+
+    <div class="panel-card">
+        <div class="panel-left">
+            <h3 data-i18n="soonHeading">Er komt een aankondiging aan</h3>
+            <p class="note" data-i18n="soonText">
+                We werken aan iets nieuws. Volg ons op TikTok en Instagram zodat je het als eerste weet.
+            </p>
+        </div>
+    </div>
 
 </section>
 
 
 <!-- FOOTER -->
 <footer>
-    <div data-i18n="footerText">
-        © 2026 AXL & SHAZZA PRESENT —
-        Alle rechten voorbehouden
-    </div>
+    <div data-i18n="footerText">© 2026 AXL & SHAZZA PRESENT • Alle rechten voorbehouden</div>
     <a class="ig-badge" href="mailto:info@axlshazzalive.com">info@axlshazzalive.com</a>
-
 </footer>
 
 <div class="side-glow left"></div>
 <div class="side-glow right"></div>
 
-<a
-        href="#artists"
-        class="floating-artists-btn"
-        onclick="openArtists()"
-        data-i18n="artistsTitle">
-
-    Wie zijn wij
-
-</a>
-
-<!-- MINI MUSIC BUTTON -->
-<div class="mini-music-player">
-
-    <button onclick="toggleMiniMusic()" class="mini-music-btn">
-        ♫
-    </button>
-
-    <div class="mini-music-popup">
-
-        <div class="mini-header">
-            <strong>First Impression</strong>
-
-            <button onclick="toggleMiniMusic()">
-                ✕
-            </button>
-        </div>
-
-        <iframe
-                src="https://open.spotify.com/embed/playlist/0BkCTQKsKR96xLylJOvVbR?utm_source=generator&theme=0"
-                frameborder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy">
-        </iframe>
-
-    </div>
-
-</div>
+<a href="#artists"
+   class="floating-artists-btn"
+   onclick="openArtists()"
+   data-i18n="artistsTitle">Wie zijn wij</a>
 
 </body>
 </html>
